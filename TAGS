@@ -1,0 +1,42 @@
+
+./app/Main.hs,52
+module Main Main0,1
+main main4,5
+main main5,6
+
+./test/Spec.hs,130
+histogram histogram5,6
+histogram histogram6,7
+main main11,12
+main main12,13
+applyRs applyRs29,30
+applyRs applyRs30,31
+
+./Setup.hs,15
+main main1,2
+
+./src/Lib.hs,622
+module Lib Lib19,20
+data Item Item27,28
+data Item a = Item Item27,28
+data Item a = Item { value value27,28
+                   , prob prob28,29
+data RWheel RWheel31,32
+data RWheel a = RWheel RWheel31,32
+data RWheel a = RWheel { total total31,32
+                       , maxWt maxWt32,33
+                       , items items33,34
+enqueue enqueue38,39
+enqueue enqueue39,40
+geoSeries geoSeries44,45
+geoSeries geoSeries45,46
+get get49,50
+get get50,51
+del del61,62
+del del62,63
+dequeue dequeue66,67
+dequeue dequeue67,68
+mean mean71,72
+mean mean72,73
+getP getP79,80
+getP getP80,81
