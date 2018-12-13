@@ -1,4 +1,6 @@
-import Lib
+module Main where
+
+import RouletteSelection
 import System.Random
 import Control.Exception
 import Text.Printf
