@@ -33,4 +33,4 @@ applyRs :: Eq a => Int -> StdGen -> RWheel a -> [Item a]
 applyRs 0 _ _ = []
 applyRs n g queue =
     let (got, g') = get queue g 0
-     in [got] ++ applyRs (n-1) g' queue
+     in got : applyRs (n-1) g' queue

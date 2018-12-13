@@ -75,7 +75,7 @@ dequeue wheel g =
      in (del wheel item, item, g)
 
 mean :: [Double] -> Double
-mean xs = sum xs / (fromIntegral $ length xs)
+mean xs = sum xs / fromIntegral $ length xs
 
 -- |Magic formula to calculate the liklihood we should reject the
 -- ith item.  The formula  is different  from the  probability of
@@ -83,8 +83,8 @@ mean xs = sum xs / (fromIntegral $ length xs)
 -- you  will  draw  several  times  until  you  get  the  correct
 -- probability.
 getP :: Int -> RWheel a -> Double
-getP i wheel = w / (n * wmax * (geoSeries (1 - avg / wmax) 1000))
-  where n    = (fromIntegral . length . items $ wheel) -- number of items
+getP i wheel = w / (n * wmax * geoSeries (1 - avg / wmax) 1000)
+  where n    = fromIntegral . length . items $ wheel   -- number of items
         wmax = maxWt wheel                             -- largest weight
         w    = prob $ items wheel !! i                 -- weight of the ith item
         avg  = mean $ prob <$> items wheel             -- average weight
